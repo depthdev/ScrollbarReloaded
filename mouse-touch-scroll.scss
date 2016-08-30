@@ -1,0 +1,56 @@
+/*
+MouseTouchScroll v0.1.0b
+(c) 2016 Depth Development. http://depthdev.com
+License: MIT
+*/
+
+[mouse-touch-scroll] {
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    [mouse-touch-scroll-x-track],
+    [mouse-touch-scroll-y-track] {
+      opacity: 1;
+    }
+  }
+}
+[mouse-touch-scroll-content] {
+  position: relative;
+  width: 100%;
+}
+[mouse-touch-scroll-x-track],
+[mouse-touch-scroll-y-track] {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.25s linear;
+}
+[mouse-touch-scroll-x-track="hide"],
+[mouse-touch-scroll-y-track="hide"] {
+  opacity: 0 !important;
+}
+[mouse-touch-scroll-x-rail],
+[mouse-touch-scroll-y-rail] {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  border-radius: 5px;
+  box-shadow: inset 0 0 6px 0 rgba(0,0,0,0.5);
+}
+[mouse-touch-scroll-x-train],
+[mouse-touch-scroll-y-train] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: rgba(128,128,128,0.5);
+  box-shadow: inherit;
+  cursor: pointer;
+}
+
+[mouse-touch-scroll-x-track] { bottom: 0; left: 0; height: 10px; }
+[mouse-touch-scroll-y-track] { top: 0; right: 0; width: 10px; }
