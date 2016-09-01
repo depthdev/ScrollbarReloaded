@@ -1,5 +1,7 @@
 # MouseTouchScroll
-Cross-browser, custom scrollbar with touch support and built in master scrollbar support.
+Cross-browser custom scrollbar, with touch support and built in master/slave support.
+
+### [Demo](http://depthdev.com/modules) (Available shortly)
 
 ### Markup & Inline Options
 * Apply the attribute `mouse-touch-scroll` to applicable elements.
