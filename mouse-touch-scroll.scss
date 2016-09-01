@@ -1,7 +1,7 @@
 /*
-MouseTouchScroll v0.1.0b
-(c) 2016 Depth Development. http://depthdev.com
-License: MIT
+  MouseTouchScroll v1.0.0
+  (c) 2016 Depth Development. http://depthdev.com
+  License: MIT
 */
 
 [mouse-touch-scroll] {
@@ -13,9 +13,28 @@ License: MIT
       opacity: 1;
     }
   }
+  &[mouse-touch-scroll-x="false"] {
+    [mouse-touch-scroll-x-track] {
+      opacity: 0 !important;
+    }
+  }
+  &[mouse-touch-scroll-y="false"] {
+    [mouse-touch-scroll-y-track] {
+      opacity: 0 !important;
+    }    
+  }
+}
+[mouse-touch-scroll^="master"] {
+  width: 25px;
+  [mouse-touch-scroll-content] {
+    height: 200%;
+  }
+  [mouse-touch-scroll-x-track],
+  [mouse-touch-scroll-y-track] {
+    opacity: 1 !important;
+  }
 }
 [mouse-touch-scroll-content] {
-  position: relative;
   width: 100%;
 }
 [mouse-touch-scroll-x-track],
@@ -25,7 +44,7 @@ License: MIT
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: opacity 0.25s linear;
+  border-radius: 5px;
 }
 [mouse-touch-scroll-x-track="hide"],
 [mouse-touch-scroll-y-track="hide"] {
@@ -36,8 +55,8 @@ License: MIT
   position: relative;
   width: inherit;
   height: inherit;
-  border-radius: 5px;
-  box-shadow: inset 0 0 6px 0 rgba(0,0,0,0.5);
+  border-radius: inherit;
+  box-shadow: inset 0 0 6px 0 rgba(0,0,0,0.25);
 }
 [mouse-touch-scroll-x-train],
 [mouse-touch-scroll-y-train] {
@@ -47,10 +66,58 @@ License: MIT
   width: inherit;
   height: inherit;
   border-radius: inherit;
-  background: rgba(128,128,128,0.5);
+  background: rgba(0,0,0,0.125);
   box-shadow: inherit;
   cursor: pointer;
 }
 
-[mouse-touch-scroll-x-track] { bottom: 0; left: 0; height: 10px; }
-[mouse-touch-scroll-y-track] { top: 0; right: 0; width: 10px; }
+[mouse-touch-scroll-x-track] {
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  transition: height 0.125s linear, opacity 0.25s linear;
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    top: -6px;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    transition: top 0.125s linear;
+  }
+  &:hover,
+  &[mouse-touch-scroll-x-track="active"] {
+    height: 16px;
+    border-radius: 8px;
+    &:before {
+      top: 0;
+    }
+  }
+}
+[mouse-touch-scroll-y-track] {
+  top: 0;
+  right: 0;
+  width: 10px;
+  transition: width 0.125s linear, opacity 0.25s linear;
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -6px;
+    width: inherit;
+    height: inherit;
+    transition: left 0.25s linear;
+  }
+  &:hover,
+  &[mouse-touch-scroll-y-track="active"] {
+    width: 16px;
+    border-radius: 8px;
+    &:before {
+      left: 0;
+    }
+  }
+}
