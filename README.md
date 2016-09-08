@@ -1,5 +1,5 @@
-# MouseTouchScroll
-Cross-browser custom scrollbar, with touch support and built in master/slave support.
+# ScrollbarReloaded
+JavaScript scrollbar plugin to unify scrollbar styling. Supports IE10+, and all major browsers. Built-in master/slave hook. Supports 3 rendering types. Touch enabled.
 
 ### [Demo](http://depthdev.com/modules) (Available shortly)
 
