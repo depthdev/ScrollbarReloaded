@@ -1,7 +1,7 @@
 # ScrollbarReloaded
 JavaScript scrollbar plugin to unify scrollbar styling. Supports IE10+, and all major browsers. Built-in master/slave hook. Supports 3 rendering types. Touch enabled.
 
-### [Demo](http://depthdev.com/modules) (Available shortly)
+### [Demo](http://depthdev.com/modules)
 
 ### Markup & Inline Options
 * Apply the attribute `scrollbar-reloaded` to applicable elements.
