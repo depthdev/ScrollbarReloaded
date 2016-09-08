@@ -1,44 +1,44 @@
 /*
-  MouseTouchScroll v1.0.0
+  ScrollbarReloaded v1.0.0
   (c) 2016 Depth Development. http://depthdev.com
   License: MIT
 */
 
-[mouse-touch-scroll] {
+[scrollbar-reloaded] {
   position: relative;
   overflow: hidden;
   &:hover {
-    [mouse-touch-scroll-x-track],
-    [mouse-touch-scroll-y-track] {
+    [scrollbar-reloaded-x-track],
+    [scrollbar-reloaded-y-track] {
       opacity: 1;
     }
   }
-  &[mouse-touch-scroll-x="false"] {
-    [mouse-touch-scroll-x-track] {
+  &[scrollbar-reloaded-x="false"] {
+    [scrollbar-reloaded-x-track] {
       opacity: 0 !important;
     }
   }
-  &[mouse-touch-scroll-y="false"] {
-    [mouse-touch-scroll-y-track] {
+  &[scrollbar-reloaded-y="false"] {
+    [scrollbar-reloaded-y-track] {
       opacity: 0 !important;
     }    
   }
 }
-[mouse-touch-scroll^="master"] {
+[scrollbar-reloaded^="master"] {
   width: 25px;
-  [mouse-touch-scroll-content] {
+  [scrollbar-reloaded-content] {
     height: 200%;
   }
-  [mouse-touch-scroll-x-track],
-  [mouse-touch-scroll-y-track] {
+  [scrollbar-reloaded-x-track],
+  [scrollbar-reloaded-y-track] {
     opacity: 1 !important;
   }
 }
-[mouse-touch-scroll-content] {
+[scrollbar-reloaded-content] {
   width: 100%;
 }
-[mouse-touch-scroll-x-track],
-[mouse-touch-scroll-y-track] {
+[scrollbar-reloaded-x-track],
+[scrollbar-reloaded-y-track] {
   position: absolute;
   z-index: 1;
   width: 100%;
@@ -46,20 +46,20 @@
   opacity: 0;
   border-radius: 5px;
 }
-[mouse-touch-scroll-x-track="hide"],
-[mouse-touch-scroll-y-track="hide"] {
+[scrollbar-reloaded-x-track="hide"],
+[scrollbar-reloaded-y-track="hide"] {
   opacity: 0 !important;
 }
-[mouse-touch-scroll-x-rail],
-[mouse-touch-scroll-y-rail] {
+[scrollbar-reloaded-x-rail],
+[scrollbar-reloaded-y-rail] {
   position: relative;
   width: inherit;
   height: inherit;
   border-radius: inherit;
   box-shadow: inset 0 0 6px 0 rgba(0,0,0,0.25);
 }
-[mouse-touch-scroll-x-train],
-[mouse-touch-scroll-y-train] {
+[scrollbar-reloaded-x-train],
+[scrollbar-reloaded-y-train] {
   position: absolute;
   top: 0;
   left: 0;
@@ -71,7 +71,7 @@
   cursor: pointer;
 }
 
-[mouse-touch-scroll-x-track] {
+[scrollbar-reloaded-x-track] {
   bottom: 0;
   left: 0;
   height: 10px;
@@ -88,7 +88,7 @@
     transition: top 0.125s linear;
   }
   &:hover,
-  &[mouse-touch-scroll-x-track="active"] {
+  &[scrollbar-reloaded-x-track="active"] {
     height: 16px;
     border-radius: 8px;
     &:before {
@@ -96,7 +96,7 @@
     }
   }
 }
-[mouse-touch-scroll-y-track] {
+[scrollbar-reloaded-y-track] {
   top: 0;
   right: 0;
   width: 10px;
@@ -113,7 +113,7 @@
     transition: left 0.25s linear;
   }
   &:hover,
-  &[mouse-touch-scroll-y-track="active"] {
+  &[scrollbar-reloaded-y-track="active"] {
     width: 16px;
     border-radius: 8px;
     &:before {
